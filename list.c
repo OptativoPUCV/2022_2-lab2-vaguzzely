@@ -69,7 +69,7 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
-  node *current = list -> current;
+  Node *current = list -> current;
   current -> prev -> next = list -> current -> next;
   current -> next -> prev = list -> current -> prev;
 

@@ -45,10 +45,17 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
+  if(list)
     return NULL;
 }
 
 void pushFront(List * list, void * data) {
+  if(list == NULL) return NULL;
+  Node *newNode = crearNode(data);
+  
+  if(list->head != NULL){
+    
+  }
 }
 
 void pushBack(List * list, void * data) {

@@ -622,3 +622,20 @@ list.c:58:3: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 df9ec1b
+Mon 22 Aug 2022 03:25:13 AM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:119:8: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  119 |   free(current);
+      |        ^~~~~~~
+      |        popCurrent
+list.c:119:8: note: each undeclared identifier is reported only once for each function it appears in
+list.c: In function ‘nextList’:
+list.c:58:3: error: control reaches end of non-void function [-Werror=return-type]
+   58 |   }
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+7df7d72

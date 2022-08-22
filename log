@@ -479,3 +479,17 @@ Mon 22 Aug 2022 02:21:12 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 a88de95
+Mon 22 Aug 2022 02:34:44 AM UTC: 
+ list.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:92:10: error: ‘Node’ has no member named ‘sig’
+   92 |   newNode->sig = list->current->next;
+      |          ^~
+list.c:93:17: error: ‘sig’ undeclared (first use in this function)
+   93 |   list->current-sig= newNode;
+      |                 ^~~
+list.c:93:17: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+30a610f

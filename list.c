@@ -27,15 +27,23 @@ Node * createNode(void * data) {
     new->next = NULL;
     return new;
 }
-
+//1. Programe la función `List* createList()`, la cual retorna el puntero del tipo de dato `List` con sus valores inicializados en NULL.
 List * createList() {
-     return NULL;
-}
-
+  List *list = (List *) malloc (sizeof(List));
+	list->head = NULL;
+  list->tail = NULL;
+	list->current = NULL;
+	return list;
+  }
+/*2. Programe las funciones `void * firstList(List * list)` y `void * nextList(List * list)`. 
+   * La primera retorna el dato del primer nodo de la lista (`head`) y actualiza el current para que apunte a ese nodo. 
+  */
 void * firstList(List * list) {
-    return NULL;
-}
+  list->current = list->head;
+  return (list->current);
+  }
 
+/* * La segunda función retorna el dato del nodo a continuación del current y actualiza el current para que apunte a ese nodo.*/
 void * nextList(List * list) {
     return NULL;
 }

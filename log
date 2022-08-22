@@ -455,3 +455,17 @@ list.c:84:7: error: request for member ‘prev’ in something not a structure o
 cc1: all warnings being treated as errors
 Compilation failed
 caeeb1f
+Mon 22 Aug 2022 02:15:57 AM UTC: 
+ list.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:81:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   81 |     return NULL;
+      |            ^~~~
+list.c:79:6: note: declared here
+   79 | void pushFront(List * list, void * data){
+      |      ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+467568f

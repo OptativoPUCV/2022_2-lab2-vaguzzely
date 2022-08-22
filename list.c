@@ -40,13 +40,13 @@ List * createList() {
   */
 void * firstList(List * list) {
   list->current = list->head;
-  return (list->current);
+  return (list->current->data);
   }
 
 /* * La segunda función retorna el dato del nodo a continuación del current y actualiza el current para que apunte a ese nodo.*/
 void * nextList(List * list) {
   list->current = list->current->next;
-  return list->current;
+  return list->current->data;
 }
 /*3. Programe las funciones `void * lastList(List * list)` y `void * prevList(List * list)`.
    * La primera retorna el dato del último elemento en la lista y actualiza el current al nodo correspondiente. */

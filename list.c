@@ -68,7 +68,10 @@ void * lastList(List * list) {
 /* La segunda función retorna el dato del nodo anterior a current y actualiza el current para que apunte a ese nodo.*/
 void * prevList(List * list) {
   list->current = list->current->prev;
-  return (list->current->data);
+  if(list->current != NULL)
+    return (list->current->data);
+  else
+    return NULL;
 }
 /*. Programe la función `void pushFront(List * list, void * data)`, la cual agrega un dato al comienzo de la lista. 
 > Puede utilizar la función `Node* createNode(void * data)` la cual crea, incializa y retorna un nodo con el dato correspondiente. */

@@ -51,7 +51,9 @@ void * firstList(List * list) {
 void * nextList(List * list) {
   if(list->current->next != NULL)
     list->current = list->current->next;
-    return (list->current->data);
+  return (list->current->data);
+  if(list->current == NULL);
+  return NULL;
   }
 /*3. Programe las funciones `void * lastList(List * list)` y `void * prevList(List * list)`.
    * La primera retorna el dato del último elemento en la lista y actualiza el current al nodo correspondiente. */
